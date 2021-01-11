@@ -8,11 +8,11 @@
     "js/chunk-2d21a3d2.37ded7a4.js.map",
     "js/chunk-2d22d746.675038fc.js",
     "js/chunk-2d22d746.675038fc.js.map",
-    "js/main.4191e17d.js",
-    "js/main.4191e17d.js.map"
+    "js/main.b7511de8.js",
+    "js/main.b7511de8.js.map"
   ],
   "initial": [
-    "js/main.4191e17d.js"
+    "js/main.b7511de8.js"
   ],
   "async": [
     "js/chunk-2d21a3d2.37ded7a4.js",
@@ -116,6 +116,10 @@
       8
     ],
     "761fbdc8": [
+      7,
+      8
+    ],
+    "453a3f82": [
       7,
       8
     ],

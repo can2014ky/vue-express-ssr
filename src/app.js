@@ -4,6 +4,18 @@ import createRouter from './router'
 import createStore from './store'
 import { sync } from 'vuex-router-sync'
 
+Vue.mixin({
+  beforeMount () {
+    const { asyncData } = this.$options
+    if (asyncData) {
+      this.dataPromise = asyncData({
+        store: this.$store,
+        route: this.$route
+      })
+    }
+  }
+})
+
 // 工厂函数——创建新的应用程序实例
 export default function createApp () {
   const router = createRouter()
@@ -15,5 +27,5 @@ export default function createApp () {
     store,
     render: h => h(App)
   })
-  return { app, router }
+  return { app, router, store }
 }

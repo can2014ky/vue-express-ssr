@@ -17,19 +17,15 @@ const renderer = createBundleRenderer(serverBundle, {
 
 // 中间件处理静态文件请求
 app.use(express.static('../dist/client', {index: false}))
-// app.use(express.static('../dist/client'))
 
 // 路由处理交给vue
 app.get("*", async (req, res) => {
   try {
-    console.log(999, req.url)
     const context = {
       url: req.url,
       title: 'ssr test'
     }
     const html = await renderer.renderToString(context);
-    // eslint-disable-next-line no-console
-    console.log(html);
     res.send(html);
   } catch (error) {
     res.status(500).send("服务器内部错误");
@@ -37,6 +33,5 @@ app.get("*", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  // eslint-disable-next-line no-console
   console.log("渲染服务器启动成功");
 });

@@ -4,18 +4,18 @@
     "favicon.ico",
     "index.html",
     "index.template.html",
-    "js/chunk-2d21a3d2.37ded7a4.js",
-    "js/chunk-2d21a3d2.37ded7a4.js.map",
+    "js/chunk-2d21a3d2.14b3c02d.js",
+    "js/chunk-2d21a3d2.14b3c02d.js.map",
     "js/chunk-2d22d746.675038fc.js",
     "js/chunk-2d22d746.675038fc.js.map",
-    "js/main.b7511de8.js",
-    "js/main.b7511de8.js.map"
+    "js/main.70a0b361.js",
+    "js/main.70a0b361.js.map"
   ],
   "initial": [
-    "js/main.b7511de8.js"
+    "js/main.70a0b361.js"
   ],
   "async": [
-    "js/chunk-2d21a3d2.37ded7a4.js",
+    "js/chunk-2d21a3d2.14b3c02d.js",
     "js/chunk-2d22d746.675038fc.js"
   ],
   "modules": {

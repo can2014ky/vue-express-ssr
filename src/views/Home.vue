@@ -2,6 +2,9 @@
   <div class="home">
     <div>首页</div>
     <div>{{ item }}</div>
+    <div>
+      <span @click="onChange">切换</span>
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,11 @@ export default {
   computed: {
     item () {
       return this.$store.state.items
+    }
+  },
+  methods: {
+    onChange () {
+      this.$store.dispatch('fetchItem', 'hello Vue and SSR')
     }
   }
 }

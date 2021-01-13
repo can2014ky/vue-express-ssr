@@ -28,10 +28,11 @@ app.get(['/', '/about'], async (req, res) => {
     const html = await renderer.renderToString(context);
     res.send(html);
   } catch (error) {
+    console.log(error)
     res.status(500).send("服务器内部错误");
   }
 });
 
 app.listen(3000, () => {
-  console.log("渲染服务器启动成功");
+  console.log("渲染服务器启动成功: localhost:3000");
 });

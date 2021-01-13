@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import modules from './loadModules'
 
 Vue.use(Vuex)
 
@@ -17,6 +18,7 @@ export default function createStore () {
       fetchItem ({ commit }, item) {
         commit('setItem', item)
       }
-    }
+    },
+    modules
   })
 }

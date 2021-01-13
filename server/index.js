@@ -1,6 +1,6 @@
 // nodejs服务器
 const express = require("express");
-const Vue = require("vue");
+const Vue = require("vue")
 const fs = require('fs')
 
 // 创建express实例和vue实例
@@ -18,12 +18,12 @@ const renderer = createBundleRenderer(serverBundle, {
 // 中间件处理静态文件请求
 app.use(express.static('../dist/client', {index: false}))
 
-// 路由处理交给vue
-app.get("*", async (req, res) => {
+// 路由处理交给vue, 按需服务端渲染
+app.get(['/', '/about'], async (req, res) => {
   try {
     const context = {
       url: req.url,
-      title: 'ssr test'
+      title: 'ssr'
     }
     const html = await renderer.renderToString(context);
     res.send(html);

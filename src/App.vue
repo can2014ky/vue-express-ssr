@@ -1,12 +1,25 @@
 <template>
   <div id="app">
     <div id="nav">
+      <div>
+        <img :src="src" alt="">
+      </div>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      src: require('@/assets/logo.png')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

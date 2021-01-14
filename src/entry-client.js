@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import createApp from './app'
+import createApp from './main'
 
 Vue.mixin({
   beforeMount () {

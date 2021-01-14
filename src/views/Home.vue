@@ -12,7 +12,7 @@
 export default {
   name: 'Home',
   asyncData ({ store, route }) {
-    return store.dispatch('fetchItem', 'hello ssr')
+    return store.dispatch('home/fetchItem', 'hello ssr')
   },
   computed: {
     item () {
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     onChange () {
-      this.$store.dispatch('fetchItem', 'hello Vue and SSR')
+      this.$store.dispatch('home/fetchItem', 'hello Vue and SSR')
     }
   }
 }

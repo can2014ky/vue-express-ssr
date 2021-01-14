@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 const getBookFromBackendApi = id => new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve({ name: '《图解HTTP》', price: 100 })
@@ -22,7 +20,7 @@ export default {
 
   mutations: {
     setItem (state, { id, item }) {
-      Vue.set(state.items, id, item)
+      state.items[id] = item
     }
   }
 }

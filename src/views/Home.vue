@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div>首页</div>
-    <div>{{ item }}</div>
+    <div>{{ item }} {{ name }}</div>
     <div>
       <span @click="onChange">切换</span>
     </div>
@@ -14,10 +14,18 @@ export default {
   asyncData ({ store, route }) {
     return store.dispatch('home/fetchItem', 'hello ssr')
   },
+  data () {
+    return {
+      name: '哈哈哈~'
+    }
+  },
   computed: {
     item () {
       return this.$store.state.items
     }
+  },
+  mounted () {
+    this.name = 'hehehe~'
   },
   methods: {
     onChange () {

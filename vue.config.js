@@ -8,10 +8,14 @@ const target = TARGET_NODE ? "server" : "client";
 const isPro = process.env.NODE_ENV !== 'development';
 
 module.exports = {
+  publicPath: isPro ? '/' : 'http://127.0.0.1:8080',
   css: {
     extract: isPro ? true : false,
   },
   outputDir: './dist/'+target,
+  devServer: {
+    headers: {'Access-Control-Allow-Origin': '*'}
+  },
   configureWebpack: () => ({
     entry: `./src/entry-${target}.js`,
     // 需要开启source-map文件映射，因为服务器端在渲染时，会通过Bundle中的map文件映射关系进行文件的查询

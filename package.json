@@ -7,7 +7,7 @@
     "build:client": "vue-cli-service build",
     "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build",
     "build": "rimraf dist && npm run build:server && npm run build:client",
-    "server:dev": "cross-env WEBPACK_TARGET=node SSR_ENV=dev node ./server/index.js",
+    "server:dev": "cross-env NODE_ENV=development WEBPACK_TARGET=node SSR_ENV=dev node ./server/index.js",
     "dev": "concurrently \"npm run serve\" \"npm run server:dev\" "
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "lodash.merge": "^4.6.2",
+    "serve-favicon": "^2.5.0",
     "vue": "^2.6.12",
     "vue-router": "^3.2.0",
     "vue-server-renderer": "^2.6.12",

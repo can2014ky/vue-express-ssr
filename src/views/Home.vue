@@ -14,6 +14,17 @@ export default {
   asyncData ({ store, route }) {
     return store.dispatch('home/fetchItem', 'hello ssr')
   },
+  metaInfo: {
+    title: 'Home',
+    meta: [{
+      name: 'keyWords',
+      content: 'My Example App'
+    }],
+    link: [{
+      rel: 'asstes',
+      href: 'https://assets-cdn.github.com/'
+    }]
+  },
   data () {
     return {
       name: '哈哈哈~'

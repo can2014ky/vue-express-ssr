@@ -17,6 +17,7 @@
     "lodash.merge": "^4.6.2",
     "serve-favicon": "^2.5.0",
     "vue": "^2.6.12",
+    "vue-meta-info": "^0.1.7",
     "vue-router": "^3.2.0",
     "vue-server-renderer": "^2.6.12",
     "vuex": "^3.4.0",
